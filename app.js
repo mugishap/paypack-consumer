@@ -8,9 +8,10 @@ dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
-const { CLIENT_ID, CLIENT_SECRET,ENVIRONMENT } = process.env;
+const { CLIENT_ID, CLIENT_SECRET, ENVIRONMENT } = process.env;
 app.use(express.json());
 app.use(bodyParser.json({}))
+app.use(cors({ origin: '*' }))
 
 paypack.config({
     client_id: CLIENT_ID,
