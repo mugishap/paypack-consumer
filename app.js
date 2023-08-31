@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const http = require('http')
 const paypack = require("paypack-js");
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 dotenv.config();
 
