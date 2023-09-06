@@ -29,7 +29,7 @@ app.post('/pay', async (req, res) => {
     })
         .then((data) => {
             console.log(data.data);
-            return res.status(400).json({ success: true, message: "Payment initiated successfully" })
+            return res.status(200).json({ success: true, message: "Payment initiated successfully" })
         })
         .catch((err) => {
             console.log(err);
