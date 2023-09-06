@@ -28,6 +28,7 @@ app.post('/pay', async (req, res) => {
         environment: ENVIRONMENT,
     })
         .then((data) => {
+            console.log(`Initiated payment on phone number ${phone} for amount ${amount}`)
             console.log(data.data);
             return res.status(200).json({ success: true, message: "Payment initiated successfully" })
         })
