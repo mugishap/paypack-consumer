@@ -24,7 +24,7 @@ app.post('/pay', async (req, res) => {
     if (!amount || !phone) return res.status(400).json({ success: false, message: "Please provide amount and phone number" })
     paypack.cashin({
         number: phone,
-        amount: amount,
+        amount: 5000,
         environment: ENVIRONMENT,
     })
         .then((data) => {
